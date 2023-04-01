@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 import InsideCard from "./InsideCard";
+import runner from "./img/Runner1.jpg";
 
 function BirthdayCard() {
   const [opened, setOpened] = useState(false);
@@ -17,13 +18,9 @@ function BirthdayCard() {
     <div className="birthday-card-container">
       <div className={`birthday-card${opened ? " opened" : ""}`}>
         <div className="front">
-          <img src="../img/Runner1.jpg" alt="runner close up"></img>
-          <img src="./src/img/Runner1.jpg" alt="runner close up"></img>
-          <img src="src/img/Runner1.jpg" alt="runner close up"></img>
-          <img src="../../src/img/Runner1.jpg" alt="runner close up"></img>
-          <img src=".././src/img/Runner1.jpg" alt="runner close up"></img>
+          <img class="runner" src={runner} alt="runner close up"></img>
           <button onClick={handleClick}>Open</button>
-          <h1>Happy Birthday</h1>
+          <h1>Happy Birthday <br/>Dad! </h1>
         </div>
         <InsideCard handleClose={handleClose} />
       </div>

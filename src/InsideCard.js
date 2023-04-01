@@ -1,4 +1,5 @@
 import React from "react";
+import runner from "./img/Runner2.jpg";
 
 export default function InsideCard({ handleClose }) {
   return (
@@ -10,10 +11,10 @@ export default function InsideCard({ handleClose }) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      <img src="./src/img/Runner2.jpg" alt="runner action"></img>
+      <img class="runner2" src={runner} alt="runner action"></img>
 
-      <p>A Very Special Happy Birthday!</p>
-      <button onClick={handleClose}>Close card</button>
+      <p className="inside-text">Wishing you a very Happy Birthday! <br></br>May it be overrun with fun!</p>
+      <button className="inside-button" onClick={handleClose}>Close</button>
     </div>
   );
 }
