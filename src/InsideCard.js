@@ -10,7 +10,7 @@ export default function InsideCard({ handleClose }) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-                <img src="./src/img/Runner2.jpg"></img>
+      <img src="./src/img/Runner2.jpg" alt="runner action"></img>
 
       <p>A Very Special Happy Birthday!</p>
       <button onClick={handleClose}>Close card</button>
