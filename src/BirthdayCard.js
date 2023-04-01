@@ -17,8 +17,7 @@ function BirthdayCard() {
     <div className="birthday-card-container">
       <div className={`birthday-card${opened ? " opened" : ""}`}>
         <div className="front">
-          <img src="./src/img/Runner1.jpg"></img>
-          <img src="./src/img/Runner2.jpg"></img>
+          <img src="../img/Runner1.jpg"></img>
           <button onClick={handleClick}>Open</button>
           <h1>Happy Birthday</h1>
         </div>

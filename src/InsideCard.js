@@ -5,11 +5,13 @@ export default function InsideCard({ handleClose }) {
     <div className="inside">
       <iframe
         title="Happy Birthday Video"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        src="https://www.youtube.com/embed/fTbEpGZyseA?autoplay=1"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
+                <img src="./src/img/Runner2.jpg"></img>
+
       <p>A Very Special Happy Birthday!</p>
       <button onClick={handleClose}>Close card</button>
     </div>
