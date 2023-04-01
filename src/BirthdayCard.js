@@ -4,28 +4,26 @@ import InsideCard from "./InsideCard";
 
 function BirthdayCard() {
   const [opened, setOpened] = useState(false);
-  const [showButton, setShowButton] = useState(true);
 
   const handleClick = () => {
     setOpened(true);
-    setShowButton(false);
   };
 
   const handleClose = () => {
     setOpened(false);
-    setShowButton(true);
   };
 
   return (
-    <div className={`birthday-card${opened ? " opened" : ""}`}>
-      {opened ? (
-        <InsideCard handleClose={handleClose} />
-      ) : (
+    <div className="birthday-card-container">
+      <div className={`birthday-card${opened ? " opened" : ""}`}>
         <div className="front">
-          <button onClick={handleClick}>Abrir tarjeta</button>
-          <h1>¡Feliz cumpleaños!</h1>
+          <img src="./src/img/Runner1.jpg"></img>
+          <img src="./src/img/Runner2.jpg"></img>
+          <button onClick={handleClick}>Open</button>
+          <h1>Happy Birthday</h1>
         </div>
-      )}
+        <InsideCard handleClose={handleClose} />
+      </div>
     </div>
   );
 }

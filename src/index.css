@@ -6,33 +6,57 @@
     position: relative;
     margin: 20px;
     transition: transform 1s;
-    transform-style: preserve-3d;
-  }
-  
-  .birthday-card.opened {
+}
+
+/* .birthday-card.opened {
     transform: rotateY(-180deg);
-  }
-  
-  .front,
-  .inside {
+} */
+
+.birthday-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.birthday-card{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+}
+
+.birthday-card.opened .front {
+    transform: rotateY(-99deg);
+    transform-origin: left;
+    backface-visibility: visible;
+}
+.birthday-card .front {
+    transform: rotateY(-1deg);
+    transform-origin: left;
+    backface-visibility: visible;
+}
+
+
+.front,
+.inside {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .front {
+    backface-visibility: visible;
+
+}
+
+.front {
     background-color: #c41e3a;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #fff;
-  }
-  
-  .front button {
+}
+
+.front button {
     padding: 10px 20px;
     font-size: 20px;
     background-color: #fff;
@@ -41,20 +65,27 @@
     color: #c41e3a;
     cursor: pointer;
     outline: none;
-  }
-  
-  .inside {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.inside {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #c41e3a;
-    transform: rotateY(-180deg);
-    padding: 20px;
-  }
-  
-  iframe {
+   
+}
+
+iframe {
     margin-bottom: 20px;
-  }
-  
+}
