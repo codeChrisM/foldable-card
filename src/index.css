@@ -1,0 +1,60 @@
+.birthday-card {
+    border: 2px solid #c41e3a;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    margin: 20px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .birthday-card.opened {
+    transform: rotateY(-180deg);
+  }
+  
+  .front,
+  .inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-color: #c41e3a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .front button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #c41e3a;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .inside {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #c41e3a;
+    transform: rotateY(-180deg);
+    padding: 20px;
+  }
+  
+  iframe {
+    margin-bottom: 20px;
+  }
+  
